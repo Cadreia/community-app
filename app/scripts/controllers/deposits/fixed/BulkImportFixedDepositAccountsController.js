@@ -7,7 +7,7 @@
                 + '&locale=' + scope.optlang.code + '&dateFormat=' + scope.df;
             scope.formData = {};
             var requestParams = {staffInSelectedOfficeOnly:true};
-            let today = new Date().toISOString().slice(0, 10);
+            var today = new Date().toISOString().slice(0, 10);
 
             resourceFactory.clientTemplateResource.get(requestParams, function (data) {
                 scope.offices = data.officeOptions;

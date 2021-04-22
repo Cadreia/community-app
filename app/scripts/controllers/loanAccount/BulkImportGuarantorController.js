@@ -6,7 +6,7 @@
             scope.first.templateUrl =  API_VERSION + '/loans/1/guarantors/downloadtemplate' + '?tenantIdentifier=' + $rootScope.tenantIdentifier
                 + '&locale=' + scope.optlang.code + '&dateFormat=' + scope.df;
             scope.formData = {};
-            let today = new Date().toISOString().slice(0, 10);
+            var today = new Date().toISOString().slice(0, 10);
 
             resourceFactory.officeResource.getAllOffices(function (data) {
                 scope.offices=data;
